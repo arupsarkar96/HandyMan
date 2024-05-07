@@ -1,9 +1,28 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
+app.set("view engine", "ejs")
+
+
+app.use('/public', express.static("./public"))
+
 
 app.get('/', (req, res) => {
-    res.send('Welcome handyman services')
+    res.render('index')
 })
 
-app.listen(80, '0.0.0.0', () => {
-    console.log('App running on ', 80)
+app.get('/about', (req, res) => {
+    res.render('about')
+})
+
+app.get('/service', (req, res) => {
+    res.render('service')
+})
+
+app.get('/contact', (req, res) => {
+    res.render('contact')
+})
+
+
+app.listen(8080, '0.0.0.0', () => {
+    console.log('App running on ', 8080)
 })
