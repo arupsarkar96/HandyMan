@@ -13,8 +13,8 @@ $(".owl-carousel").owlCarousel({
     nav: true,
     dots: false,
     navText: [
-        '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
-        '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'
+        '<i class="bi bi-arrow-left" aria-hidden="true"></i>',
+        '<i class="bi bi-arrow-right" aria-hidden="true"></i>'
     ],
     autoplay: true,
     autoplayHoverPause: true,
@@ -35,7 +35,7 @@ $(".owl-carousel").owlCarousel({
 
 function myMap() {
     var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
+        center: new google.maps.LatLng(1.3341460005334307, 103.88582135887064),
         zoom: 18,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);

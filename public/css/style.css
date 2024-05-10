@@ -5,6 +5,13 @@ body {
   color: #040000;
 }
 
+#whatsappChat {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 16px;
+}
+
 .layout_padding {
   padding-top: 120px;
   padding-bottom: 120px;
