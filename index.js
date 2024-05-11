@@ -21,6 +21,9 @@ app.use(express.static(path.join(__dirname, 'public'), {
     maxAge: '10d', // Adjust as per your caching needs
 }))
 
+app.use('*', (req, res) => {
+    res.sendStatus(404)
+})
 
 // app.get('/robots.txt', (req, res) => {
 //     res.render('index')
