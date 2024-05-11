@@ -164,8 +164,8 @@ header .header-image img {
 }
 
 .service_section .box .img-box img {
-    max-height: 100%;
-    max-width: 100%;
+    height: 56px;
+    width: 56px;
     -webkit-transition: all .3s;
     transition: all .3s;
 }

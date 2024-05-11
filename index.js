@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public'), {
 }))
 
 
-// app.get('/', (req, res) => {
+// app.get('/robots.txt', (req, res) => {
 //     res.render('index')
 // })
 
