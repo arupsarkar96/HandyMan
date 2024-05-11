@@ -4,6 +4,17 @@ const app = express()
 var compression = require('compression')
 var morgan = require('morgan')
 
+
+// Middleware to redirect non-www to www
+app.use((req, res, next) => {
+    if (req.headers.host.startsWith('www.')) {
+        const redirectUrl = `https://handymanexpert24.com`;
+        res.redirect(301, redirectUrl);
+    } else {
+        // Redirect to the www version of the URL
+        next()
+    }
+})
 app.use(morgan(':req[x-forwarded-for] :method :url :status :res[content-length] - :response-time ms'))
 app.use(compression())
 app.use(express.static(path.join(__dirname, 'public'), {
