@@ -1,11 +1,14 @@
 const express = require('express')
+const path = require('path')
 const app = express()
 var compression = require('compression')
 var morgan = require('morgan')
 
-app.use(morgan('short'))
+app.use(morgan(':req[x-forwarded-for] :method :url :status :res[content-length] - :response-time ms'))
 app.use(compression())
-app.use(express.static("./public"))
+app.use(express.static(path.join(__dirname, 'public'), {
+    maxAge: '10d', // Adjust as per your caching needs
+}))
 
 
 // app.get('/', (req, res) => {
