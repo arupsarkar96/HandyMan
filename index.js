@@ -1,26 +1,28 @@
 const express = require('express')
 const app = express()
-app.set("view engine", "ejs")
+var compression = require('compression')
+var morgan = require('morgan')
+
+app.use(morgan('short'))
+app.use(compression())
+app.use(express.static("./public"))
 
 
-app.use('/public', express.static("./public"))
+// app.get('/', (req, res) => {
+//     res.render('index')
+// })
 
+// app.get('/about', (req, res) => {
+//     res.render('about')
+// })
 
-app.get('/', (req, res) => {
-    res.render('index')
-})
+// app.get('/service', (req, res) => {
+//     res.render('service')
+// })
 
-app.get('/about', (req, res) => {
-    res.render('about')
-})
-
-app.get('/service', (req, res) => {
-    res.render('service')
-})
-
-app.get('/contact', (req, res) => {
-    res.render('contact')
-})
+// app.get('/contact', (req, res) => {
+//     res.render('contact')
+// })
 
 
 app.listen(8080, '0.0.0.0', () => {
