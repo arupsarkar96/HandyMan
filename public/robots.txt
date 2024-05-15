@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /assets/
 Sitemap: https://handimanexpert24.com/sitemap.xml
