@@ -131,19 +131,23 @@ header .header-image img {
 }
 
 .section_label {
-    padding: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     background-color: #d1e3ff;
     color: #0355cc;
 }
 
 .section_label_inverse {
-    padding: 16px;
+    padding-left: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     background-color: #0355cc;
     color: #d1e3ff;
 }
 
-.section_label h2,
-.section_label_inverse h2 {
+.section_label h3,
+.section_label_inverse h3 {
     text-transform: capitalize;
     font-weight: bold;
     margin: 0;
