@@ -49,37 +49,8 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     if (post === null) {
         return (<>Try again later ! Database is down</>)
     } else {
-        const schemaData = {
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.seo_title || post.title,
-            "image": post.image || "", // Ensure image is a valid string or fallback
-            "datePublished": post.date, // Assumes post has a date field for publication
-            "author": {
-                "@type": "Person",
-                "name": "Admin",
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Handyman Expert 24",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "/favicon.ico" // Replace with actual logo URL if available
-                }
-            },
-            "description": post.seo_body || "Read this post on our blog.",
-        };
-
         return (
             <>
-                {/* <Head>
-                    <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-                    />
-                </Head> */}
-
-
                 <div className="relative w-full h-[360px]">
                     <Image
                         src={post.image || "/favicon.ico"} // Ensure a fallback image exists
