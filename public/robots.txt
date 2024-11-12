@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Sitemap: https://handimanexpert24.com/sitemap.xml
+Allow: /
+
+# Host
+Host: https://handymanexpert24.com
+
+# Sitemaps
+Sitemap: https://handymanexpert24.com/sitemap.xml
