@@ -1,7 +1,6 @@
 import { getPostData } from "@/lib/operations";
 import { Post } from "@/model/Post";
 import { Metadata } from "next";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { HiPhone } from "react-icons/hi2";
