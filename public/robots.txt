@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://handimanexpert24.com/sitemap.xml
